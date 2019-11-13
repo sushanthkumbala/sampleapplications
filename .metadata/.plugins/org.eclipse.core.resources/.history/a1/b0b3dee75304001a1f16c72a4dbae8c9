@@ -1,0 +1,29 @@
+package com.example.JunitMock;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import static org.mockito.Mockito.*;
+
+@RunWith(MockitoJUnitRunner.class)
+public class MathApplicationTester {
+
+	
+@InjectMocks
+MathApplication mathApplication=new MathApplication();
+
+@Mock
+CalculatorService calculatorService;
+
+@Test
+public void testAdd() {
+	when(calculatorService.add(20.0, 10.0)).thenReturn(30.0);
+	 Assert.assertEquals(mathApplication.add(20.0, 10.0), 30.0,0);
+	 Assert.assertEquals(mathApplication.add(20.0, 10.0), 30.0,0);
+	 verify(calculatorService).add(20.0, 10.0);
+	 verify(calculatorService, times(2)).add(20.0, 10.0);
+}
+}

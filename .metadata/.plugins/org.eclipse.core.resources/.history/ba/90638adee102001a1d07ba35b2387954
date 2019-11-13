@@ -1,0 +1,9 @@
+package com.example.kafkaproject;
+
+import java.util.List;
+
+public class Order {
+	
+	private List<Shipments> shipList;
+
+}

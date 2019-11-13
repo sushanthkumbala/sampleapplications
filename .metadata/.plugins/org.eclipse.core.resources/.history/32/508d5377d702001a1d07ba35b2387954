@@ -1,0 +1,45 @@
+package com.example.kafkaproject;
+
+import org.reactivestreams.Subscriber;
+import org.reactivestreams.Subscription;
+
+import reactor.core.publisher.Flux;
+
+public class SampleWebfluxProject {
+	 Flux<String> flux=Flux.just("Sushanth","Prakash","Susheela","Harika").subscribe(new Subscriber<String>() {
+
+		@Override
+		public void onSubscribe(Subscription s) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onNext(String t) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onError(Throwable t) {
+			// TODO Auto-generated method stub
+			
+		}
+
+		@Override
+		public void onComplete() {
+			// TODO Auto-generated method stub
+			
+		}
+	});;
+	 
+	 
+			 
+			 
+	 
+	 
+	 
+	
+
+
+}

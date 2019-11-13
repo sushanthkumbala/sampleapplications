@@ -1,0 +1,25 @@
+package com.example.kafkaproject;
+
+import java.util.List;
+
+
+public class Order {
+	
+	private List<Shipments> shipList;
+
+	public List<Shipments> getShipList() {
+		return shipList;
+	}
+
+	public void setShipList(List<Shipments> shipList) {
+		this.shipList = shipList;
+	}
+
+	public Order(List<Shipments> shipList) {
+		super();
+		this.shipList = shipList;
+	}
+	
+	
+
+}

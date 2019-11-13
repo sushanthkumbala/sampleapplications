@@ -1,0 +1,11 @@
+package com.example.kafkaproject;
+
+import reactor.core.publisher.Flux;
+
+public class SampleWebfluxProject {
+	 Flux<String> flux=Flux.just("Sushanth","Prakash","Susheela","Harika");
+	 
+	 
+
+
+}

@@ -1,0 +1,5 @@
+package com.example.JunitMock;
+
+public interface CalculatorService {
+
+}

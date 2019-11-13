@@ -1,0 +1,37 @@
+package com.example.JunitMock;
+
+import org.junit.Assert;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.junit.MockitoJUnitRunner;
+import static org.mockito.Mockito.*;
+
+@RunWith(MockitoJUnitRunner.class)
+public class MathApplicationTester {
+
+	
+@InjectMocks
+MathApplication mathApplication=new MathApplication();
+
+@Mock
+CalculatorService calculatorService;
+
+//@Test(expected = RuntimeException.class)
+@Test
+public void testAdd() {
+	when(calculatorService.add(20.0, 10.0)).thenReturn(30.0);
+	 Assert.assertEquals(mathApplication.add(20.0, 10.0), 30.0,0);
+	 Assert.assertEquals(mathApplication.add(20.0, 10.0), 30.0,0);
+	 Assert.assertEquals(mathApplication.add(20.0, 10.0), 30.0,0);
+	 //verify(calculatorService).add(20.0, 10.0);
+	 //verify(calculatorService, times(3)).add(20.0, 10.0);
+	 verify(calculatorService, atLeast(2)).add(20.0, 10.0);
+	 verify(calculatorService, atLeastOnce()).add(20.0, 10.0);
+	 //verify(calculatorService,atMost(3)).add(20.0, 10.0);
+	 //doThrow(new RuntimeException("Add method is not implemented")).when(calculatorService).add(20.0, 10.0);
+	 reset(calculatorService);
+	 //Assert.assertEquals(mathApplication.add(20.0, 10.0), 30.0,0);
+}
+}

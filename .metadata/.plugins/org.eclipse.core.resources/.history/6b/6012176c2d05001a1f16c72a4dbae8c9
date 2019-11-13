@@ -1,0 +1,5 @@
+package com.microser.stock.repository;
+
+public interface QuotesRepository {
+
+}

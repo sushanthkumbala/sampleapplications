@@ -1,0 +1,30 @@
+package com.javainuse;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class SpringRabbitMQListnerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(SpringRabbitMQListnerApplication.class, args);
+	}
+	
+	@Bean
+    public MappingJackson2MessageConverter jackson2Converter() {
+        MappingJackson2MessageConverter converter = new MappingJackson2MessageConverter();
+        return converter;
+    }
+
+    @Bean
+    public DefaultMessageHandlerMethodFactory myHandlerMethodFactory() {
+        DefaultMessageHandlerMethodFactory factory = new DefaultMessageHandlerMethodFactory();
+        factory.setMessageConverter(jackson2Converter());
+        return factory;
+    }
+
+    @Override
+    public void configureRabbitListeners(RabbitListenerEndpointRegistrar registrar) {
+        registrar.setMessageHandlerMethodFactory(myHandlerMethodFactory());
+    }
+}

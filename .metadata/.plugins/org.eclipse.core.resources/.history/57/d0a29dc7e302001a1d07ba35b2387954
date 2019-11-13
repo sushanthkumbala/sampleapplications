@@ -1,0 +1,8 @@
+package com.example.kafkaproject;
+
+public class OrderFatchingUsingFlux {
+	
+	Order order=new Order();
+	
+
+}

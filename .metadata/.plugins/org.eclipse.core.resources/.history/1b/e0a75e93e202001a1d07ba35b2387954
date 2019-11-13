@@ -1,0 +1,26 @@
+package com.example.kafkaproject;
+
+public class Iteams {
+	
+	private int Id;
+	private String iteamName;
+
+	public String getIteamName() {
+		return iteamName;
+	}
+
+	public void setIteamName(String iteamName) {
+		this.iteamName = iteamName;
+	}
+
+	public int getId() {
+		return Id;
+	}
+
+	public void setId(int id) {
+		Id = id;
+	}
+	
+	
+
+}

@@ -1,0 +1,7 @@
+package com.example.kafkaproject;
+
+@EnableKafka
+@Configuration
+public class KafkaConsumerConfig {
+
+}

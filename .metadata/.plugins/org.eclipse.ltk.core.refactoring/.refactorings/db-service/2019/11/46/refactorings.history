@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move element &apos;QuotesRepository.java&apos; to &apos;db-service/src/main/java/com.microser.stock.repository&apos;&#x0D;&#x0A;- Original project: &apos;db-service&apos;&#x0D;&#x0A;- Destination element: &apos;db-service/src/main/java/com.microser.stock.repository&apos;&#x0D;&#x0A;- Original element: &apos;com.microser.stock.resource.QuotesRepository.java&apos;&#x0D;&#x0A;- Update references to refactored element" description="Move compilation unit" destination="/src\/main\/java&lt;com.microser.stock.repository" element1="/src\/main\/java&lt;com.microser.stock.resource{QuotesRepository.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.move" patterns="*" policy="org.eclipse.jdt.ui.moveResources" qualified="false" references="true" stamp="1573550055584" units="1" version="1.0"/>
+</session>
